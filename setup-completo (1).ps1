@@ -125,7 +125,7 @@ server {
         deny all;
     }
 }
-'@ | Out-File "docker/nginx/default.conf" -Encoding UTF8 -NoNewline
+'@ | Set-Content "docker/nginx/default.conf" -Encoding ascii
 Write-Host "  - default.conf" -ForegroundColor Green
 
 # -- docker-compose.yml -------------------------------------------------------
