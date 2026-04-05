@@ -135,7 +135,7 @@ services:
     image: nginx:alpine
     container_name: nginx_server
     ports:
-      - "80:80"
+      - "8000:80"
     volumes:
       - ./src:/var/www/html
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
@@ -268,7 +268,7 @@ APP_NAME=Laravel
 APP_ENV=local
 APP_KEY=
 APP_DEBUG=true
-APP_URL=http://localhost
+APP_URL=http://localhost:8000
 
 LOG_CHANNEL=stack
 LOG_LEVEL=debug
@@ -372,7 +372,7 @@ Write-Host "===================================" -ForegroundColor Green
 Write-Host ""
 Write-Host "Tu aplicacion Laravel esta lista en:" -ForegroundColor Cyan
 Write-Host ""
-Write-Host "  Web:        http://localhost" -ForegroundColor Green
+Write-Host "  Web:        http://localhost:8000" -ForegroundColor Green
 Write-Host "  PhpMyAdmin: http://localhost:8080" -ForegroundColor Green
 Write-Host ""
 Write-Host "Credenciales de Base de Datos:" -ForegroundColor Yellow
